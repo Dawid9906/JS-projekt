@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularz</title>
+    <script src="formularz.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="formularz.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <img src="./zdjęcia/logo.png" height="50px" width="50px" alt="" />
+      </div>
+      <div id="navbar">
+        <ul>
+          <li><a href="">O nas</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Galeria</a></li>
+          <li><a href="">Kontakt</a></li>
+        </ul>
+      </div>
+      <div id="login-buttons">
+        <button>Zaloguj się | Zarejestruj się</button>
+      </div>
+    </header>
+    <main>
+      <div id="block2" >
+        <div id="form">
+          <form method="get" action="podsumowanie.html" onsubmit="return validateForm()" id="form1">
+            <p>Podaj imię i nazwisko: <input type="text" id="name" /></p>
+            <p>Podaj miejscę odbioru: <input type="text" id="place"/></p>
+            <p>Rodzaj finansowania:
+              <p>
+                <label  class="form-control">
+                  <input type="radio" id="gotowka" name="radio"> 
+                  <label for="gotowka">Gotówka </label>
+                </label>
+                <label  class="form-control">
+                  <span id="leasing"></span>
+                  <input type="radio" id="leas" name="radio">                        
+                  <label for="leas">Leasing</label>
+                </label>
+              </p>
+          </p>
+          <p> <p>Data odebrania samochodu</p> <select name="" id=""  >
+            <option  id="receiptDay"></option>
+          </select>
+          <p>
+            <select name="" id="select">
+              <option id="accessories" >Dodatkowe akcesoria</option>
+              <option class="acc"> Rok gwarancji | 2000zł </option>
+              <option class="acc"> Opony zimowe | 1500zł</option>
+              <option class="acc"> Płyn do spryskiwaczy | 50zł</option>
+              <option class="acc"> Olej silnikowy | 100zł</option>
+            </select>
+          </p>
+          <p><button type="submit" value="Zakup" id = "buy-button">Zakup</button></p>
+          </form>
+        </div>
+        <div id="order-info">
+          <h2 id="chosen-car">Wybrany samochód: <span id="car-name"></span> </h2>
+          <h2><div id="paragraph"></div></h2>
+          <h2 id="total-price">Cena całkowita PLN: <span id="car-price"> </span>  </h2>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h2><a href="index.html"> <span>&larr;</span> Powrót do wyboru samochodu</a></h2>
+    </footer>
+  </body>
+</html>

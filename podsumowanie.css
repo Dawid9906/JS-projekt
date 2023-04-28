@@ -1,0 +1,28 @@
+#block3 {
+  width: 80%;
+  margin: 10% auto;
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  background-color: rgb(40, 40, 43);
+  justify-content: space-around;
+  text-align: center;
+}
+
+p {
+  font-size: 1.8rem;
+}
+p:nth-child(1) {
+  font-size: 2.5rem;
+}
+span {
+  color: #32c0a3;
+}
+#car-image {
+  width: 25%;
+  height: 25%;
+  position: relative;
+  margin-top: 100px;
+  border: 1px solid #32c0a3;
+  border-radius: 10px;
+}

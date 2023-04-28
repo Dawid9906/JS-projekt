@@ -1,0 +1,202 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(52, 52, 52);
+  color: white;
+  font-family: "Lato", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+header {
+  height: 10%;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(40, 40, 43);
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 8px rgba(0, 255, 255, 0.5);
+}
+#logo {
+  position: absolute;
+  left: 20px;
+}
+#logo img {
+  border-radius: 20px;
+}
+#navbar {
+  width: 50%;
+}
+#navbar ul li,
+#find-us ul li {
+  display: inline-block;
+}
+#navbar ul {
+  margin-bottom: 0;
+}
+#navbar ul li,
+#navbar ul li a {
+  color: rgb(249, 246, 238);
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: 1.7rem;
+}
+#navbar ul li :hover {
+  color: #32c0a3;
+  text-shadow: 0px 0px 16px rgba(0, 255, 255, 0.5);
+}
+#login-buttons {
+  position: absolute;
+  right: 20px;
+}
+#login-buttons button {
+  padding: 8px;
+  margin-right: 10px;
+  background-color: #32c0a3;
+  color: rgb(40, 40, 43);
+  border: solid 2px rgb(249, 246, 238);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+#login-buttons button:hover,
+#logo img:hover {
+  box-shadow: 0px 0px 16px hsla(180, 100%, 50%, 0.5);
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  z-index: 0;
+  margin-top: 5%;
+}
+#slider {
+  width: 100%;
+  height: 200px;
+  background-image: url("./zdjęcia/tło.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+section #search {
+  width: 50%;
+  margin-left: 15%;
+}
+#search-loop {
+  width: 400px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  background-color: rgb(52, 52, 52);
+  border: 2px solid #32c0a3;
+  color: rgb(249, 246, 238);
+  padding-left: 30px;
+}
+#search i {
+  position: absolute;
+  margin-left: 360px;
+  margin-top: 10px;
+  color: #32c0a3;
+}
+#search-loop::placeholder {
+  color: #32c0a4ab;
+}
+#block {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 50vh;
+}
+.auto-banner {
+  margin: 35px 0;
+  height: 200px;
+  border-radius: 10px;
+  background: rgb(40, 40, 43);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.auto-banner:hover {
+  cursor: pointer;
+  border: 1px solid #32c0a3;
+}
+.image img {
+  width: 200px;
+  height: 150px;
+  margin-left: 20px;
+  border-radius: 2px;
+}
+.auto-text {
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+.auto-text h2 {
+  font-size: 2rem;
+}
+.price {
+  right: 30px;
+  bottom: 10px;
+  position: absolute;
+  color: #32c0a3;
+}
+.price h2 {
+  font-size: 2rem;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  height: 20%;
+  background-color: rgb(40, 40, 43);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.5),
+    0px 8px 16px rgba(0, 255, 255, 0.5);
+}
+footer ul li a i {
+  color: rgb(50, 192, 163);
+}
+#contact ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+#contact ul li a {
+  color: rgb(249, 246, 238);
+  text-decoration: none;
+}
+#copyrights {
+  position: absolute;
+  bottom: 0;
+}
+#contact {
+  margin-bottom: 10px;
+}
+
+footer h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  color: rgb(249, 246, 238);
+}
+#find-us h3 {
+  margin-top: 0;
+}
+footer ul {
+  margin-top: 10px;
+}
+i {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+#find-us i {
+  font-size: 2.5rem;
+  margin-right: 25px;
+}

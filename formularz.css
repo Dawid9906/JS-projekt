@@ -1,0 +1,133 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  color: rgb(249, 246, 238);
+}
+#block2 {
+  width: 80%;
+  margin: 10% auto;
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  background-color: rgb(40, 40, 43);
+  justify-content: space-around;
+}
+#form {
+  font-size: 1.4rem;
+  padding-right: 50px;
+  border-right: 4px dotted #32c0a3;
+}
+#form p {
+  margin: 30px 0;
+}
+input[type="text"] {
+  display: inline-block;
+  width: 250px;
+  height: 25px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+#leasing {
+  margin-left: 30px;
+}
+input[type="radio"] {
+  margin: 0 2px;
+  appearance: none;
+  width: 1.35em;
+  height: 1.35em;
+  border: 0.2em solid #32c0a3;
+  border-radius: 50%;
+  background-color: white;
+}
+input[type="radio"]:checked {
+  background-color: #32c0a3;
+}
+input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid #32c0a3;
+  outline-offset: max(2px, 0.15em);
+}
+select {
+  width: 60%;
+  font-size: 1.2rem;
+  border: 2px solid #32c0a3;
+  position: relative;
+  margin: 0 auto;
+}
+option:nth-child(odd) {
+  background-color: gray;
+}
+option:nth-child(even) {
+  background-color: lightgrey;
+}
+form p:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+#accessories {
+  color: #32c0a3;
+  background-color: rgb(40, 40, 43);
+}
+.acc {
+  color: black;
+}
+#buy-button {
+  display: inline-block;
+  padding: 5px;
+  font-size: 1.3rem;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #32c0a3;
+  color: white;
+  border: 3px solid #32c0a3;
+}
+#buy-button:hover {
+  font-weight: bold;
+  border: 3px solid lightgray;
+}
+#order-info div {
+  text-align: right;
+}
+#total-price {
+  text-align: right;
+}
+h2:nth-child(odd) {
+  font-size: 1.8rem;
+}
+h2 span {
+  color: #32c0a3;
+}
+#paragraph {
+  border-top: 1px solid #32c0a3;
+  border-bottom: 1px solid #32c0a3;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 10%;
+  background-color: rgb(40, 40, 43);
+  width: 40%;
+  box-shadow: 0px 8px 16px rgba(0, 255, 255, 0.5),
+    5px -5px 16px rgba(0, 255, 255, 0.5);
+  border-radius: 0 2rem 2rem 0;
+}
+footer a {
+  color: #32c0a3;
+  text-decoration: none;
+  font-size: 2rem;
+}
+footer h2 span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.cancel {
+  margin: 0 10px;
+}
+.cancel:hover {
+  color: red;
+  cursor: pointer;
+}
