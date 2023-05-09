@@ -20,6 +20,7 @@ const accPrices = [2000, 1500, 50, 100];
 const counter = 0;
 const accSelect = (function () {
   for (let i = 0; i < $acc.length; i++) {
+    let e = i
     $acc[i].addEventListener("click", function (e) {
       let $par = document.createElement("p");
       $par.innerHTML = $acc[e].textContent;
