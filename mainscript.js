@@ -42,20 +42,20 @@ let Car6 = new Car("Audi", "Q5", "./zdjęcia/q5.jpg", 2018, 85000, 150, 122000);
 let Car7 = new Car("BMW", "M4", "./zdjęcia/m4.jpg", 2017, 135000, 460, 200000);
 let Car8 = new Car("BMW", "X3", "./zdjęcia/x3.jpg", 2019, 159000, 184, 159000);
 
-let Cars = [Car1, Car2, Car3, Car4, Car5, Car6, Car7, Car8];
+const Cars = [Car1, Car2, Car3, Car4, Car5, Car6, Car7, Car8];
 
 console.log(window.localStorage);
-let $carBrands = document.getElementsByClassName("carBrand");
-let $carNames = document.getElementsByClassName("carName");
-let $carYears = document.getElementsByClassName("carYear");
-let $carEnginePowers = document.getElementsByClassName("carEnginePower");
-let $carMileages = document.getElementsByClassName("carMileage");
-let $carPrices = document.getElementsByClassName("carPrice");
-let $carImages = document.getElementsByClassName("carImage");
+const $carBrands = document.getElementsByClassName("carBrand");
+const $carNames = document.getElementsByClassName("carName");
+const $carYears = document.getElementsByClassName("carYear");
+const $carEnginePowers = document.getElementsByClassName("carEnginePower");
+const $carMileages = document.getElementsByClassName("carMileage");
+const $carPrices = document.getElementsByClassName("carPrice");
+const $carImages = document.getElementsByClassName("carImage");
 console.log($carImages);
 
 let showCarInfo = (function () {
-  for (i = 0; i < 8; i++) {
+  for (let i = 0; i < 8; i++) {
     $carBrands[i].insertAdjacentText("afterbegin", Cars[i].brand);
     $carNames[i].insertAdjacentText("afterbegin", Cars[i].name);
     $carYears[i].insertAdjacentText("afterbegin", Cars[i].year);
@@ -67,7 +67,7 @@ let showCarInfo = (function () {
 })();
 
 const $searchInput = document.getElementById("search-loop");
-let $autoBanners = document.getElementsByClassName("auto-banner");
+const $autoBanners = document.getElementsByClassName("auto-banner");
 
 $searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase();
@@ -85,7 +85,7 @@ $searchInput.addEventListener("input", (e) => {
 });
 
 let clickBanner = (function () {
-  for (i = 0; i < 8; i++) {
+  for (let i = 0; i < 8; i++) {
     let e = i;
     $autoBanners[i].addEventListener("click", function () {
       window.localStorage.setItem("brand", Cars[e].brand);
