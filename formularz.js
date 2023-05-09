@@ -1,5 +1,5 @@
-let $name = document.getElementById("car-name");
-let $price = document.getElementById("car-price");
+const $name = document.getElementById("car-name");
+const $price = document.getElementById("car-price");
 window.addEventListener("load", function () {
   $name.innerText = `${window.localStorage.getItem(
     "brand"
@@ -7,21 +7,20 @@ window.addEventListener("load", function () {
   $price.innerText = window.localStorage.getItem("price");
 });
 
-let $select = document.getElementById("select");
-let $accessories = document.getElementById("accessories");
+const $select = document.getElementById("select");
+const $accessories = document.getElementById("accessories");
 
 $select.addEventListener("focus", function () {
   $select.setAttribute("multiple", 1);
   $accessories.setAttribute("disabled", 1);
 });
-let $divPar = document.getElementById("paragraph");
-let $acc = document.getElementsByClassName("acc");
-let accPrices = [2000, 1500, 50, 100];
-let counter = 0;
-let accSelect = (function () {
-  for (i = 0; i < $acc.length; i++) {
-    let e = i;
-    $acc[i].addEventListener("click", function () {
+const $divPar = document.getElementById("paragraph");
+const $acc = document.getElementsByClassName("acc");
+const accPrices = [2000, 1500, 50, 100];
+const counter = 0;
+const accSelect = (function () {
+  for (let i = 0; i < $acc.length; i++) {
+    $acc[i].addEventListener("click", function (e) {
       let $par = document.createElement("p");
       $par.innerHTML = $acc[e].textContent;
       let $span = document.createElement("span");
@@ -30,24 +29,24 @@ let accSelect = (function () {
       $span.appendChild(txt);
       $par.appendChild($span);
       $divPar.appendChild($par);
-      $acc[e].setAttribute("disabled", 1);
-      $acc[e].setAttribute("style", "text-decoration: line-through");
+      e.target.setAttribute("disabled", 1);
+      e.target.setAttribute("style", "text-decoration: line-through");
       counter = parseInt($price.innerText);
-      counter += accPrices[e];
+      counter += accPrices[i];
       $price.innerText = counter;
     });
   }
 })();
 
-let $cancel = document.getElementsByClassName("cancel");
+const $cancel = document.getElementsByClassName("cancel");
 console.log($cancel);
-let $par2 = document.querySelectorAll("#paragraph p");
+const $par2 = document.querySelectorAll("#paragraph p");
 
 $divPar.addEventListener("click", function (e) {
   const target = e.target.closest(".cancel");
 
   $par2 = target.parentElement;
-  let text = $par2.innerText;
+  const text = $par2.innerText;
 
   let text1 = "Rok gwarancji | 2000zł ×";
   let text2 = "Opony zimowe | 1500zł×";
@@ -143,7 +142,7 @@ function validateForm() {
   return validate;
 }
 
-let $inputs = document.querySelectorAll("input[type ='text']");
+const $inputs = document.querySelectorAll("input[type ='text']");
 console.log($inputs);
 $inputs[0].addEventListener("keyup", (event) => {
   localStorage.setItem("clientName", event.currentTarget.value);
