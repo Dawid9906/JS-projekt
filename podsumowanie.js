@@ -1,8 +1,8 @@
-let $name = document.getElementById("car-name");
-let $price = document.getElementById("car-price");
-let $img = document.getElementById("car-image");
-let $date = document.getElementById("receipt-day");
-let $payMethod = document.getElementById("pay-method");
+const $name = document.getElementById("car-name");
+const $price = document.getElementById("car-price");
+const $img = document.getElementById("car-image");
+const $date = document.getElementById("receipt-day");
+const $payMethod = document.getElementById("pay-method");
 
 window.addEventListener("load", function () {
   $name.innerText = `${window.localStorage.getItem(
