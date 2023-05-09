@@ -1,5 +1,5 @@
 const $name = document.getElementById("car-name");
-const $price = document.getElementById("car-price");
+let $price = document.getElementById("car-price");
 window.addEventListener("load", function () {
   $name.innerText = `${window.localStorage.getItem(
     "brand"
@@ -16,9 +16,9 @@ $select.addEventListener("focus", function () {
 });
 const $divPar = document.getElementById("paragraph");
 const $acc = document.getElementsByClassName("acc");
-const accPrices = [2000, 1500, 50, 100];
+let accPrices = [2000, 1500, 50, 100];
 const counter = 0;
-const accSelect = (function () {
+let accSelect = (function () {
   for (let i = 0; i < $acc.length; i++) {
     let e = i;
     $acc[i].addEventListener("click", function () {
@@ -32,7 +32,7 @@ const accSelect = (function () {
       $divPar.appendChild($par);
       $acc[e].setAttribute("disabled", 1);
       $acc[e].setAttribute("style", "text-decoration: line-through");
-      counter = parseInt($price.innerText);
+      let counter = parseInt($price.innerText);
       counter += accPrices[e];
       $price.innerText = counter;
     });
@@ -41,7 +41,7 @@ const accSelect = (function () {
 
 const $cancel = document.getElementsByClassName("cancel");
 console.log($cancel);
-const $par2 = document.querySelectorAll("#paragraph p");
+let $par2 = document.querySelectorAll("#paragraph p");
 
 $divPar.addEventListener("click", function (e) {
   const target = e.target.closest(".cancel");
@@ -55,19 +55,19 @@ $divPar.addEventListener("click", function (e) {
   let text4 = "Olej silnikowy | 100zł×";
 
   if (text === text1) {
-    counter = parseInt($price.innerText);
+    let counter = parseInt($price.innerText);
     counter -= 2000;
     $price.innerText = counter;
   } else if (text === text2) {
-    counter = parseInt($price.innerText);
+    let counter = parseInt($price.innerText);
     counter -= 1500;
     $price.innerText = counter;
   } else if (text === text3) {
-    counter = parseInt($price.innerText);
+    let counter = parseInt($price.innerText);
     counter -= 50;
     $price.innerText = counter;
   } else {
-    counter = parseInt($price.innerText);
+    let counter = parseInt($price.innerText);
     counter -= 100;
     $price.innerText = counter;
   }
