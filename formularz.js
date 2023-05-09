@@ -21,7 +21,7 @@ const counter = 0;
 const accSelect = (function () {
   for (let i = 0; i < $acc.length; i++) {
     let e = i;
-    $acc[i].addEventListener("click", function (e) {
+    $acc[i].addEventListener("click", function () {
       let $par = document.createElement("p");
       $par.innerHTML = $acc[e].textContent;
       let $span = document.createElement("span");
