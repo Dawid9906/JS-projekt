@@ -139,7 +139,20 @@ function validateForm() {
   let totalPrice = document.getElementById("car-price");
   localStorage.setItem("totalPrice", totalPrice.innerText);
   localStorage.setItem("receiptDay", receiptDay);
+  if (validate) {
+    resetForm();
+  }
   return validate;
+}
+
+function resetForm() {
+  $nameInput.value = "";
+  $placeInput.value = "";
+  $radioButtons.forEach(($radio) => {
+    $radio.checked = false;
+  });
+  localStorage.setItem("clientName", "");
+  localStorage.setItem("city", "");
 }
 
 const $inputs = document.querySelectorAll("input[type ='text']");
