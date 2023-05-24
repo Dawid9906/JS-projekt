@@ -86,12 +86,11 @@ $searchInput.addEventListener("input", (e) => {
 
 let clickBanner = (function () {
   for (let i = 0; i < 8; i++) {
-    let e = i;
     $autoBanners[i].addEventListener("click", function () {
-      window.localStorage.setItem("brand", Cars[e].brand);
-      window.localStorage.setItem("name", Cars[e].name);
-      window.localStorage.setItem("price", Cars[e].price);
-      window.localStorage.setItem("img", Cars[e].img);
+      window.localStorage.setItem("brand", Cars[i].brand);
+      window.localStorage.setItem("name", Cars[i].name);
+      window.localStorage.setItem("price", Cars[i].price);
+      window.localStorage.setItem("img", Cars[i].img);
       window.location.href = "formularz.html";
     });
   }

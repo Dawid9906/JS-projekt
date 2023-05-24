@@ -20,20 +20,19 @@ let accPrices = [2000, 1500, 50, 100];
 const counter = 0;
 let accSelect = (function () {
   for (let i = 0; i < $acc.length; i++) {
-    let e = i;
     $acc[i].addEventListener("click", function () {
       let $par = document.createElement("p");
-      $par.innerHTML = $acc[e].textContent;
+      $par.innerHTML = $acc[i].textContent;
       let $span = document.createElement("span");
       $span.className = "cancel";
       let txt = document.createTextNode("\u00D7");
       $span.appendChild(txt);
       $par.appendChild($span);
       $divPar.appendChild($par);
-      $acc[e].setAttribute("disabled", 1);
-      $acc[e].setAttribute("style", "text-decoration: line-through");
+      $acc[i].setAttribute("disabled", 1);
+      $acc[i].setAttribute("style", "text-decoration: line-through");
       let counter = parseInt($price.innerText);
-      counter += accPrices[e];
+      counter += accPrices[i];
       $price.innerText = counter;
     });
   }
